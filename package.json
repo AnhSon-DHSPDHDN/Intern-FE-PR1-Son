@@ -1,0 +1,29 @@
+{
+  "name": "intern-fe-pr1-son",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awesome-academy/Intern-FE-PR1-Son.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awesome-academy/Intern-FE-PR1-Son/issues"
+  },
+  "homepage": "https://github.com/awesome-academy/Intern-FE-PR1-Son#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "pug": "^3.0.2"
+  }
+}
