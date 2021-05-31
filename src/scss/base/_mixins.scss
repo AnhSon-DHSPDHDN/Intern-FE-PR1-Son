@@ -1,0 +1,10 @@
+@mixin listNone {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin bgYellow {
+  background-color: $color-yellow;
+  color: $color-white;
+}
