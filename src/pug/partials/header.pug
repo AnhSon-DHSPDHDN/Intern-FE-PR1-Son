@@ -1,2 +1,45 @@
+include ../base/variables.pug
+
 header 
-  .container-fluid Header
+  .container-fluid.nav-bar.fixed
+    .container.nav-bar__container
+      ul 
+        each icon in iconNav
+          li
+            a
+              i(class= icon)
+      .nav-bar__container-left 
+        a(class="fw-7" href="/register.html") ĐĂNG KÍ
+        a(class="fw-7" href="/login.html") ĐĂNG NHẬP
+  
+  .container.contact__container
+    .row
+      div(class="col-xs-6 col-sm-6 col-md-3 col-lg-3 logo")
+        img(src="./assets/images/imgs/logo.png", alt="")
+      div(class="col-xs-12 col-sm-6 col-md-3 col-lg-3 hotline")
+        p.hotline__title HOTLINE: 
+        p.hotline__phone (04) 9500 9650 - (04) 9500 8850
+      div(class="col-xs-12 col-sm-6 col-md-3 col-lg-3 hotline")
+        p.hotline__title ĐẶT HÀNG NHANH:
+        p.hotline__phone (04) 9500 9650 - (04) 9500 8850
+      div(class="col-xs-6 col-sm-6 col-md-3 col-lg-3 logo")
+        input(class="input-search" placeholder="Tìm kiếm...") 
+        button.btn-search 
+          <i class="fas fa-search"></i>
+  
+  .container-fluid.menu-bar
+    .container.menu-bar__container
+      input(type="checkbox" id="nav-check")
+      label(for="nav-check" class="nav-toggle")
+        span 
+      ul
+        each menuItem in menuBar
+          li 
+            if menuItem.isActive
+              a(class="active" href=menuItem.href)= menuItem.name
+            else
+              a(href=menuItem.href)= menuItem.name
+      a(class="cart" href="/shopping-cart.html")
+        i(class="fas fa-shopping-cart")
+        span.cart__notification 1
+    

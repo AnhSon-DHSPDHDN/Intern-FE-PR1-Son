@@ -9,7 +9,7 @@ const path = {
   styles: {
     all: 'src/scss/**/*.scss',
     src: 'src/scss/style.scss',
-    dest: 'assets/css/style.css'
+    dest: 'assets/css/styles'
   },
   pug: {
     all: 'src/**/*.pug',
