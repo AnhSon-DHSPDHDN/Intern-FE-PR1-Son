@@ -8,3 +8,30 @@
   background-color: $color-yellow;
   color: $color-white;
 }
+
+@mixin customCard($height, $widthImage, $heighImg){
+  position: relative;
+  width: 100%;
+  height: $height;
+  box-shadow: 0 4px 8px 0 $color-gray;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width: $widthImage;
+    height: $heighImg;
+    object-fit: cover;
+    display: block;
+  }
+  .price{
+    color: $color-red;
+  }
+  .rating{
+    color: $color-yellow;
+    .des{
+      margin-left: 1rem;
+      color: $color-black-light;
+    }
+  }
+}
