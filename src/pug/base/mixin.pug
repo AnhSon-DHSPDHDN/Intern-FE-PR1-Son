@@ -1,0 +1,40 @@
+mixin bannerList(name, des, icon)
+  li 
+    .banner-content__container  
+      span
+        i(class=icon)
+      .banner-description 
+        h5.fw-6= name
+        p= des
+
+mixin blockProduct(name, categories)
+  .product__container-title
+    .title
+      i(class="fas fa-th-large")
+      h4.fw-6= name
+    .group-btn
+      button
+        i(class="fas fa-caret-left")
+      button
+        i(class="fas fa-caret-right")
+    if categories
+      .group-btn__categories 
+        each category in buttonCategories
+          button= category
+
+mixin showSideBar(data)
+  div(class="col-xs-12 col-sm-6 col-md-3 col-lg-3" id="side-bar__container")
+    ul 
+      each listItem in data
+        if listItem.isActive 
+          li.active
+            .list-sidebar 
+              span 
+                i(class=listItem.icon)
+              h5= listItem.name
+        else          
+          li
+            .list-sidebar 
+              span 
+                i(class=listItem.icon)
+              h5= listItem.name

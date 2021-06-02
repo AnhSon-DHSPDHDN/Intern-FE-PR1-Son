@@ -1,0 +1,535 @@
+#banner{
+  .banner-container{
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    .banner-slider{
+      padding-right: 0;
+      img{
+        width: 100%;
+        height: 44rem;
+        object-fit: cover;
+      }
+    }
+    .banner-content{
+      padding-left: 0;
+      ul{
+        @include listNone;
+        width: 100%;
+        border: 1px solid $color-gray;
+        li{
+          padding: 2rem 1rem 2rem 2rem;
+          height: 11rem;
+          i{
+            color: $color-yellow;
+          }
+          &:hover{
+            @include bgYellow;
+            cursor: pointer;
+            i{
+              color: $color-white;
+            }
+          }
+          .banner-content__container{
+            display: flex;
+            height: 7rem;
+            span{
+              width: 5rem;
+              text-align: center;
+              line-height: 7rem;
+              font-size: x-large;
+            }
+            .banner-description{
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#product{
+  .product__container{
+    position: relative;
+    .product__container-title{
+      position: relative;
+      height: 2rem;
+      margin: 2rem 0;
+      .title{
+        position: relative;
+        float: left;
+        i{
+          color: $color-yellow;
+        }
+        h4{
+          display: inline-block;
+          margin: 0 1rem;
+        }
+      }
+      .group-btn__categories{
+        position: relative;
+        float: right;
+        margin-right: 2rem;
+        button{
+          margin: 0 .25rem;
+          color: $color-black;
+          background-color: $color-white;
+          padding: .5rem 1.25rem;
+          border: 1px solid $color-black;
+          &:focus{
+            outline: none;
+          }
+          &:hover{
+            color: $color-white;
+            background-color: $color-yellow;
+            border: 1px solid $color-yellow;
+          }
+        }
+      }
+      .group-btn{
+        position: relative;
+        float: right;
+        button{
+          margin: 0 .25rem;
+          color: $color-black;
+          background-color: $color-white;
+          padding: .5rem 1.25rem;
+          border: 1px solid $color-black;
+          &:focus{
+            outline: none;
+          }
+          &:hover{
+            color: $color-white;
+            background-color: $color-black;
+          }
+        }
+      }
+    }
+
+    .feature-product{
+      position: relative;
+      margin-top: 4rem;
+      .product-list__container{
+        .card-grid{
+          margin-bottom: 3rem;
+          padding-top: 1rem;
+          .card-grid__hover{
+            position: absolute;
+            transition: .5s;
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            visibility: hidden;
+            box-shadow: 0 10px 8px 0 $color-gray;
+            z-index: 999;
+            background-color: $color-white;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 1rem;
+            .bg-yellow{
+              display: block;
+              overflow: hidden;
+              padding: 0 1rem;
+              width: 50%;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-right: .25rem;
+              @include bgYellow;
+            }
+            .bg-black{
+              display: block;
+              width: 50%;
+              padding: 0 1rem;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-left: .25rem;
+              background-color: $color-black;
+              color: $color-white;
+            }
+          }
+          &:hover{
+            .card-grid__hover{
+              visibility: visible;
+              height: 6rem;
+              bottom: -3rem;
+            }
+          }
+          @include customCard(32rem, 228px, 188px);
+        }
+      }
+    }
+
+    .new-product{
+      position: relative;
+      margin-top: 4rem;
+      .card-grid{
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+        .card-grid__hover{
+          position: absolute;
+          transition: .5s;
+          width: 100%;
+          height: 0;
+          bottom: 0;
+          visibility: hidden;
+          box-shadow: 0 10px 8px 0 $color-gray;
+          z-index: 999;
+          background-color: $color-white;
+          display: flex;
+          justify-content: space-around;
+          padding: 0 1rem;
+          .bg-yellow{
+            display: block;
+            overflow: hidden;
+            padding: 0 1rem;
+            width: 50%;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+            margin-right: .25rem;
+            @include bgYellow;
+          }
+          .bg-black{
+            display: block;
+            width: 50%;
+            padding: 0 1rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+            margin-left: .25rem;
+            background-color: $color-black;
+            color: $color-white;
+          }
+        }
+        &:hover{
+          .card-grid__hover{
+            visibility: visible;
+            height: 6rem;
+            bottom: -3rem;
+          }
+        }
+        @include customCard(37rem, 250px, 200px);
+      }
+    }
+    
+    .banner-second{
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .selling-product{
+      position: relative;
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 32rem 32rem;
+      grid-row-gap: 2rem;
+      grid-column-gap: 2rem;
+      .card-grid{
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+        .card-grid__hover{
+          position: absolute;
+          transition: .5s;
+          width: 100%;
+          height: 0;
+          bottom: 0;
+          visibility: hidden;
+          box-shadow: 0 10px 8px 0 $color-gray;
+          z-index: 999;
+          background-color: $color-white;
+          display: flex;
+          justify-content: space-around;
+          padding: 0 1rem;
+          .bg-yellow{
+            display: block;
+            overflow: hidden;
+            padding: 0 1rem;
+            width: 50%;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+            margin-right: .25rem;
+            @include bgYellow;
+          }
+          .bg-black{
+            display: block;
+            width: 50%;
+            padding: 0 1rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+            margin-left: .25rem;
+            background-color: $color-black;
+            color: $color-white;
+          }
+        }
+        &:hover{
+          .card-grid__hover{
+            visibility: visible;
+            height: 6rem;
+            bottom: -3rem;
+          }
+        }
+        @include customCard(32rem, 250px, 200px);
+      }
+    }
+    .card-grid:first-child{
+      grid-row: 1/1;
+      grid-column: 1/2;
+    }
+    .card-grid:nth-child(2){
+      grid-row: 1/3;
+      @include customCard(66rem, 500px, 350px);
+    }
+    .card-grid:nth-child(3){
+      grid-column: 3/4;
+    }
+    .card-grid:nth-child(4){
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+    .card-grid:nth-child(5){
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+
+    .banner-third{
+      img{
+        max-width: 100%;
+        object-fit: cover;
+        height: 18rem;
+      }
+    }
+
+    .hot-product{
+      .card-list{
+        position: relative;
+        display: flex;
+        padding: 1rem;
+        img{
+          width: 228px;
+          height: 188px;
+          object-fit: cover;
+          display: block;
+        }
+        &__content{
+          .des-product{
+            height: 4rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+          .price{
+            color: $color-red;
+            font-size: 150%;
+            display: inline;
+          }
+          .rating{
+            color: $color-yellow;
+            height: 2rem;
+            overflow: hidden;
+            .des{
+              margin-left: 1rem;
+              color: $color-black-light;
+            }
+          }
+          .card-list__btn{
+            position: relative;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            .bg-yellow{
+              display: block;
+              padding: 0 1rem;
+              width: 50%;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-right: .25rem;
+              @include bgYellow;
+            }
+            .bg-black{
+              display: block;
+              width: 50%;
+              padding: 0 1rem;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-left: .25rem;
+              background-color: $color-black;
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .partner-container{
+    position: relative;
+    height: 15rem;
+    background-color: $color-gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .container{
+      .row{
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        justify-content: space-around;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+        .btn-left{
+          border: none;
+          z-index: 999;
+          background-color: transparent;
+          position: absolute;
+          left: 0;
+          top: 40%;
+          &:focus{
+            outline: none;
+          }
+        }
+        .btn-right{
+          border: none;
+          background-color: transparent;
+          position: absolute;
+          right: 0;
+          top: 40%;
+          &:focus{
+            outline: none;
+          }
+        }
+        img{
+          width: 20rem;
+          height: 13rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .feedback-container{
+    position: relative;
+    background-image: url('../../images/banner/bg-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+      position: relative;
+      text-align: center;
+      h3{
+        color: $color-white;
+      }
+      form{
+        input{
+          width: 50rem;
+          height: 4rem;
+          border-radius: 2rem;
+          outline: none;
+          border: none;
+          padding-left: 2rem;
+          margin-right: 1rem;
+        }
+        button{
+          width: 10rem;
+          height: 4rem;
+          border-radius: 2rem;
+          border: none;
+          &:focus{
+            outline: none;
+          }
+          @include bgYellow;
+        }
+      }
+    }
+  }
+}
+
+#side-bar__container{
+  ul{
+    @include listNone;
+    width: 100%;
+    border: 1px solid $color-gray;
+    li{
+      padding: 1rem 2rem;
+      border-bottom: 1px solid $color-gray;
+      cursor: pointer;
+      .list-sidebar{
+        display: flex;
+        span{
+          width: 3rem;
+          height: 4rem;
+          text-align: center;
+          line-height: 4rem;
+        }
+        h5{
+          line-height: 2rem;
+        }
+      }
+      &:hover{
+        background-color: $color-black;
+        color: $color-yellow;
+      }
+    }
+    .active{
+      background-color: $color-black;
+      color: $color-yellow;
+    }
+  }  
+}
+
+
+@media (max-width: 1199px){
+  #product{
+    .product__container{
+      .selling-product{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card-grid:nth-child(2){
+        @include customCard(32rem, 250px, 200px);
+      }
+    }
+  }
+}
+
+@media (max-width:991px){
+  #banner{
+    .banner-container{
+      .banner-slider{
+        padding: 0;
+      }
+      .banner-content{
+        padding: 0;
+      }
+    }
+  }
+
+  #product{
+    .product__container{
+      .product__container-title{
+        .group-btn__categories{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 686px){
+  .feedback-container{
+    .container{
+      form{
+        input{
+          width: 100% !important;
+        }
+        button{
+          margin-top: 1rem;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
