@@ -40,6 +40,22 @@ a {
   align-items: center !important;
 }
 
+.color-red{
+  color: $color-red !important;
+}
+.color-yellow{
+  color: $color-yellow !important;
+}
+.color-blue{
+  color: $color-blue !important;
+}
+.color-sliver{
+  color: $color-gray !important;
+}
+.color-black{
+  color: $color-black !important;
+}
+
 @for $i from 1 to 9 {
   .fw-#{$i} {
     font-weight: #{$i * 100} !important;

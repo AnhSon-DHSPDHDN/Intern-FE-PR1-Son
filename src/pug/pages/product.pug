@@ -1,5 +1,80 @@
 extend ../base/base.pug
+include ../base/mixin.pug
 
 block content 
-  h1 Product 
-  
+  section#product-page 
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Danh mục sản phẩm
+
+    .container.product__container.mt-8.mb-8
+      .row
+        div(class="col-xs-12 col-sm-12 col-md-3 col-lg-3")
+          +showSideBarProductPage(sideBarProduct1)
+          +showSideBarProductPage(sideBarProduct2)
+          +showSideBarProductPage(sideBarProduct3)
+          +showSideBarSale(sideBarProductSale)
+        div(class="col-xs-12 col-sm-12 col-md-9 col-lg-9 product-list__container")
+          .row.fiter-container 
+            .fiter-container__left
+              label(for="sort-product") Sắp xếp theo:
+              select#sort-product(name="sort-product")
+                option(value="Ten") Tên sản phẩm  
+                option(value="Ten") Giá sản phẩm  
+              label(for="show-product") Show:
+              select#show-product(name="show-product")
+                option(value="Ten") 9
+                option(value="Ten") 10
+            .fiter-container__right 
+              label(for="check-show") 
+                i.fas.fa-bars
+              label(for="check-show") 
+                i.fas.fa-th
+          hr
+          input(type="checkbox" id="check-show")
+          .row.product-list 
+            each item in productPageList
+              .card-list.mb-8
+                .card-list__img
+                  img(src=item.urlImg, alt="")
+                .card-list__content
+                  h5.fw-6 MÁY KHOAN BLACK DECKER
+                  .rating 
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="far fa-star")
+                    i.des (12 Đánh giá)
+                  p.des-product= item.des
+                  span.price.fw-6 1.550.000 Đ
+                  .card-list__btn
+                    a(class="bg-yellow" href="/") MUA NGAY
+                    a(class="bg-black" href="/product-detail.html") XEM CHI TIẾT 
+          
+          .row.product-grid
+            each item in productGrid  
+              div(class="col-xs-12 col-sm-12 col-md-6 col-lg-4")
+                .card-grid
+                  .card-grid__hover
+                    a(class="bg-yellow" href="/") MUA NGAY
+                    a(class="bg-black" href="/product-detail.html") XEM CHI TIẾT
+                  img(src=item.urlImg, alt="")
+                  span.price.fw-6 1.550.000 Đ
+                  h5.fw-6 MÁY KHOAN BLACK DECKER
+                  .rating 
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="far fa-star")
+                    i.des (12 Đánh giá)
+
+          .row.panigation 
+            button Trang trước
+            button 1
+            button 2
+            button 3
+            button Trang cuối
+
