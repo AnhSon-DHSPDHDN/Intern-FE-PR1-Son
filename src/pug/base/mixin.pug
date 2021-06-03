@@ -23,7 +23,7 @@ mixin blockProduct(name, categories)
           button= category
 
 mixin showSideBar(data)
-  div(class="col-xs-12 col-sm-6 col-md-3 col-lg-3" id="side-bar__container")
+  div(class="col-xs-12 col-sm-6 col-md-3 col-lg-3" id="side-bar__container-homepage")
     ul 
       each listItem in data
         if listItem.isActive 
@@ -38,3 +38,37 @@ mixin showSideBar(data)
               span 
                 i(class=listItem.icon)
               h5= listItem.name
+
+mixin showSideBarProductPage(data)
+  ul#side-bar__container
+    each listItem in data
+      if listItem.isActive 
+        li.active
+          .list-sidebar 
+            span 
+              i(class=listItem.icon)
+            h5= listItem.name
+      else          
+        li
+          .list-sidebar 
+            span 
+              i(class=listItem.icon)
+            h5= listItem.name
+
+mixin showSideBarSale(data)
+  ul#side-bar-sale__container
+    each listItem in data
+      if listItem.isActive 
+        li.active
+          .list-sidebar 
+            span 
+              i(class=listItem.icon)
+            h5= listItem.name
+      else          
+        li
+          .list-sidebar 
+            .list-sidebar__img 
+              img(src=listItem.urlImg, alt="")
+            .list-sidebar__content
+              h5.fw-6= listItem.name
+              span.price.fw-6.color-red= listItem.price

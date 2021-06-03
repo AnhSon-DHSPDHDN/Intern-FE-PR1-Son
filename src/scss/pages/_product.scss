@@ -1,0 +1,271 @@
+#side-bar__container{
+  @include listNone;
+  border: 1px solid $color-gray;
+  width: 100%;
+  li{
+    border-bottom: 1px solid $color-gray;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    .list-sidebar{
+      display: flex;
+      span{
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        width: 3rem;
+      }
+      h5{
+        line-height: 2rem;
+      }
+    }
+    &:hover{
+      background-color: $color-black;
+      color: $color-yellow;
+    }
+  }
+  .active{
+    background-color: $color-black;
+    color: $color-yellow;
+  }
+}
+
+#side-bar-sale__container{
+  @include listNone;
+  border: 1px solid $color-gray;
+  width: 100%;
+  li{
+    border-bottom: 1px solid $color-gray;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    .list-sidebar{
+      display: flex;
+      span{
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        width: 3rem;
+      }
+      h5{
+        line-height: 2rem;
+      }
+      img{
+        height: 8rem;
+        object-fit: cover;
+        width: 8rem;
+      }
+      .list-sidebar__content{
+        h5{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .active{
+    background-color: $color-black;
+    color: $color-yellow;
+  }
+}
+
+#product-page{
+  .product__container{
+    .product-list__container{
+      .fiter-container{
+        &__left{
+          float: left;
+          select{
+            margin-left: 2rem;
+            margin-right: 2rem;
+            padding: 0.5rem 0.5rem;
+          }
+        }
+        &__right{
+          float: right;
+          position: relative;
+          label{
+            background-color: $color-white;
+            border: 1px solid $color-black;
+            cursor: pointer;
+            margin-left: .5rem;
+            padding: .5rem 1rem;
+            &:hover{
+              color: $color-yellow;
+            }
+          }
+        }
+      }
+
+      .product-list{
+        .card-list{
+          box-shadow: 0 10px 10px 0 $color-gray;
+          display: flex;
+          padding: 1rem;
+          position: relative;
+          img{
+            display: block;
+            height: 188px;
+            object-fit: cover;
+            width: 228px;
+          }
+          &__content{
+            .des-product{
+              display: -webkit-box;
+              height: 6rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+            .price{
+              color: $color-red;
+              display: inline;
+              font-size: 150%;
+            }
+            .rating{
+              color: $color-yellow;
+              height: 2rem;
+              overflow: hidden;
+              .des{
+                color: $color-black-light;
+                margin-left: 1rem;
+              }
+            }
+            .card-list__btn{
+              display: flex;
+              position: relative;
+              width: 100%;
+              text-align: center;
+              .bg-yellow{
+                display: block;
+                line-height: 4rem;
+                margin-bottom: 2rem;
+                margin-right: .25rem;
+                padding: 0 1rem;
+                width: 15rem;
+                @include bgYellow;
+              }
+              .bg-black{
+                background-color: $color-black;
+                color: $color-white;
+                display: block;
+                line-height: 4rem;
+                margin-bottom: 2rem;
+                margin-left: .25rem;
+                padding: 0 1rem;
+                width: 15rem;
+              }
+            }
+          }
+        }
+      }
+      
+      .product-grid{
+        .card-grid{
+          margin-bottom: 3rem;
+          padding-top: 1rem;
+          .card-grid__hover{
+            bottom: 0;
+            box-shadow: 0 10px 8px 0 $color-gray;
+            background-color: $color-white;
+            display: flex;
+            height: 0;
+            justify-content: space-around;
+            padding: 0 1rem;
+            position: absolute;
+            transition: .5s;
+            visibility: hidden;
+            width: 100%;
+            z-index: 999;
+            .bg-yellow{
+              display: block;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-right: .25rem;
+              overflow: hidden;
+              padding: 0 1rem;
+              width: 50%;
+              @include bgYellow;
+            }
+            .bg-black{
+              background-color: $color-black;
+              color: $color-white;
+              display: block;
+              line-height: 4rem;
+              margin-bottom: 2rem;
+              margin-left: .25rem;
+              padding: 0 1rem;
+              width: 50%;
+            }
+          }
+          &:hover{
+            .card-grid__hover{
+              bottom: -3rem;
+              height: 6rem;
+              visibility: visible;
+            }
+          }
+          @include customCard(32rem, 228px, 188px);
+        }
+      }
+      #check-show{
+        display: none;
+        &:checked ~ .product-list{
+          display: none;
+        }
+        &:checked ~ .product-grid{
+          display: inherit;
+        }
+      }
+      
+      .panigation{
+        display: flex;
+        justify-content: flex-end;
+        button{
+          background-color: $color-white;
+          border: 1px solid $color-black;
+          margin-left: .5rem;
+          padding: .5rem 1rem;
+          &:hover{
+            background-color: $color-yellow;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px){
+  #product-page{
+    .product__container{
+      .product-list__container{
+        .product-list{
+          .card-list{
+            &__content{
+              .card-list__btn{
+                @include flexColumn;
+                .bg-yellow{
+                  margin-right: 0;
+                }
+                .bg-black{
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 486px){
+  #product-page{
+    .product__container{
+      .product-list__container{
+        .fiter-container{
+          @include flexColumn;
+        }
+      }
+    }
+  }
+}
