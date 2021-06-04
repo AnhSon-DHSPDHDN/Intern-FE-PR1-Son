@@ -1,0 +1,36 @@
+#register-page{
+  .form-container{
+    .register-form{
+      input[type="text"]{
+        height: 4rem;
+      }
+      
+      .my-infor, .infor-login{
+        span{
+          color: $color-red;
+          margin-left: 1rem;
+        }
+        @include flexColumn;
+      }
+
+      .group-btn{
+        display: flex;
+        .btn-back{
+          background-color: $color-black;
+          color: $color-white;
+          display: block;
+          padding: 1rem 2rem;
+        }
+        .btn-register{
+          border: none;
+          margin-left: 1rem;
+          padding: 1rem 2rem;
+          &:focus{
+            outline: none;
+          }
+          @include bgYellow;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#page-error{
+  .page-error__container{
+    .error__content{
+      align-items: center;
+      padding: 5rem 0;
+      text-align: center;
+      @include flexColumn;
+      .title{
+        color: $color-yellow;
+        font-size: 6rem;
+      }
+      .go-back{
+        background-color: $color-black;
+        color: $color-white;
+        padding: 1rem 2rem;
+        width: 15rem;
+      }
+    }
+    
+    .error__img{
+      align-items: center;
+      padding: 1rem 0;
+      @include flexColumn;
+      img{
+        object-fit: cover;
+        width: 30rem;
+      }
+    }
+  }
+}
