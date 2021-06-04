@@ -1,4 +1,104 @@
 extend ../base/base.pug
+include ../base/mixin.pug
 
 block content 
-  h1 Product detail
+  section#product-detail-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span Danh mục sản phẩm
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Máy khoan CNC 3D
+
+    .container.product-detail__container.mt-8.mb-8
+      .row
+        div(class="col-xs-12 col-sm-12 col-md-3 col-lg-3")
+          +showSideBarProductPage(sideBarProduct1)
+          +showSideBarSale(sideBarProductSale)
+        div(class="col-xs-12 col-sm-12 col-md-9 col-lg-9 detail__main")
+          .row 
+            div(class="col-xs-12 col-sm-12 col-md-5 col-lg-5 detail__images")
+              .w-full
+                img(src="./assets/images/imgs/product2.png", alt="" class="main-img")
+              .group-img.mt-4
+                each img in groupMoreImages
+                  img(src=img, alt="")
+            div(class="col-xs-12 col-sm-12 col-md-7 col-lg-7 detail__content")
+              h3.fw-6.mt-0.mb-2 MÁY KHOAN CNC 3D
+              .rating 
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="far fa-star")
+                i.color-black (12 Đánh giá) |   
+                a(href="/") Gửi bình luận của bạn
+              span.price.fw-6.color-red.mt-2 GIÁ: 1.550.000 Đ
+              hr.mt-3.mb-3
+              h5.fw-7 Thông tin sản phẩm:
+              p.description= descriptionProduct
+              hr.mt-3.mb-3
+              .option-product 
+                .size 
+                  label.fw-7(for="size") Size:
+                  select#size(name="size")
+                    option(value="X") --Chọn size--  
+                    option(value="Y") Bự 
+                .color-option.ml-8 
+                  label.fw-7(for="size") Màu sắc:
+                  select#size(name="size")
+                    option(value="X") --Chọn màu--  
+                    option(value="Y") Tím tê tái
+              hr.mt-5.mb-5
+              .choose-quantity 
+                input(type="number")
+                a.click-buy MUA NGAY
+              .network.mt-8
+                button.fb 
+                  i.mr-2(class="fab fa-facebook-square")
+                  | Like
+                .counter-number.ml-2.pl-4.pr-4 0
+                button.tweet.ml-2 
+                  i(class="fab fa-twitter")
+                  | Tweet
+                button.google.ml-2 
+                  i(class="fab fa-google-plus-g")
+                .counter-number.ml-2.pl-4.pr-4 0
+
+          .tab-infor.row.mt-16
+            div.tab__container(role="tabpanel")
+              ul(class="nav nav-tabs tab__navigation" role="tablist")
+                li(role="presentation" class="active")
+                  a(href="#infor-product" aria-controls="infor-product" role="tab" data-toggle="tab") 
+                    | THÔNG TIN SẢN PHẨM
+                li(role="presentation")
+                  a(href="#comment" aria-controls="comment" role="tab" data-toggle="tab")
+                    | ĐÁNH GIÁ - NHẬN XÉT
+                li(role="presentation")
+                  a(href="#tags" aria-controls="tags" role="tab" data-toggle="tab")
+                    | THẺ TAGS
+          
+              .tab-content
+                div(role="tabpanel" class="tab-pane active p-8" id="infor-product")= descriptionProduct
+                div(role="tabpanel" class="tab-pane p-8" id="comment") Nhận xét
+                div(role="tabpanel" class="tab-pane p-8" id="tags") Thẻ tag
+
+          +blockProduct("SẢN PHẨM TƯƠNG TỰ", false)
+          .similar-product 
+            .row
+              each item in similarProduct  
+                div(class="col-xs-12 col-sm-6 col-md-4 col-lg-4")
+                  .card-grid
+                    .card-grid__hover
+                      a(class="bg-yellow" href="/") MUA NGAY
+                      a(class="bg-black" href="/product-detail.html") XEM CHI TIẾT
+                    img(src=item.urlImg, alt="")
+                    span.price.fw-6 1.550.000 Đ
+                    h5.fw-6 MÁY KHOAN BLACK DECKER
+                    .rating 
+                      i(class="fas fa-star")
+                      i(class="fas fa-star")
+                      i(class="fas fa-star")
+                      i(class="fas fa-star")
+                      i(class="far fa-star")
+                      i.des (12 Đánh giá)
