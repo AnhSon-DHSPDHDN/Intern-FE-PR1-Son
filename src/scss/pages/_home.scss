@@ -480,6 +480,82 @@
   }  
 }
 
+#check-popup{
+  position: absolute;
+  display: none;
+}
+
+.background-black{
+  background-color: $color-black;
+  height: 100vh;
+  opacity: .3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.popup__container{
+  background-image: url('../../images/imgs/bg_popup.jpg');
+  background-size: cover;
+  color: $color-white;
+  left: 50%;
+  height: 40rem;
+  margin-left: -35rem;
+  margin-top: -20rem;
+  position: fixed;
+  padding: 2rem 6rem;
+  top: 50%;
+  text-align: center;
+  width: 70rem;
+  z-index: 999;
+  .popup__form{
+    @include flexColumn;
+    .input-email{
+      height: 4rem;
+      padding-left: 1rem;
+      color: $color-black;
+      &:focus{
+        outline: none;
+      }
+    }
+    .btn-submit{
+      border: none;
+      height: 4rem;
+      @include bgYellow;
+    }
+
+    .no-show-popup{
+      text-align: start;
+      #no-show{
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+      label{
+        font-weight: 100;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  #popup-toggle{
+    background-color: $color-black;
+    height: 3rem;
+    line-height: 3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 3rem;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+#check-popup:checked ~ .popup__container, #check-popup:checked ~ .background-black{
+  display: none;
+}
 
 @media (max-width: 1199px){
   #product{

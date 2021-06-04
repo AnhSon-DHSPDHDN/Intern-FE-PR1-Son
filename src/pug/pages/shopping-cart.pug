@@ -1,4 +1,63 @@
 extend ../base/base.pug
 
 block content 
-  h1 Shopping Cart
+  section#shopping-cart-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Giỏ hàng
+      hr
+
+    .container.cart__container.mt-8.mb-8
+      table.table.table-bordered.table-hover
+        thead
+          tr
+            th STT
+            th.cart__img SẢN PHẨM
+            th THÔNG TIN
+            th ĐƠN GIÁ
+            th SỐ LƯỢNG
+            th THÀNH TIỀN
+            th XÓA
+        tbody
+          each cart, index in cartShopping
+            tr
+              td
+                span.fw-6= index +1
+              td.cart__img 
+                img(src=cart.img, alt="")
+              td
+                span.fw-6= cart.name
+              td 
+                span.fw-6= cart.price 
+                  |  Đ
+              td
+                input(type="number" value=cart.quantity)
+              td
+                span.fw-6= cart.price *cart.quantity
+                  |  Đ
+              td 
+                button.btn-del 
+                  i(class="fas fa-trash-alt")
+
+      .total.mt-8 
+        table.table-bordered
+          tr 
+            td
+              span.fw-6 TỔNG TIỀN:
+            td
+              span.fw-6 6.850.000 Đ
+          tr 
+            td
+              span.fw-6 THUẾ (VAT):
+            td
+              span.fw-6 685.000 Đ
+          tr 
+            td
+              span.fw-6 THANH TOÁN:
+            td
+              span.fw-6.color-red 7.685.000 Đ
+      
+      .btn-checkout-group.mt-8 
+        a.btn-back(href="/product.html") TIẾP TỤC MUA HÀNG
+        a.btn-pay(href="/") THANH TOÁN
