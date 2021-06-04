@@ -1,4 +1,56 @@
 extend ../base/base.pug
+include ../base/mixin.pug
 
 block content 
-  h1 Blog 
+  section#blog-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Tin tức
+      hr
+    
+    .container.blogs__container.mt-8.mb-8
+      .row
+        div(class="col-xs-12 col-sm-12 col-md-3 col-lg-3")
+          +showSideBarProductPage(sideBarProduct1)
+          +showSideBarNew(blogSideBar1)
+          #side-bar-lib__container.mt-4.pl-8
+            .title
+              span 
+                i(class="fas fa-th-large")
+              h5.fw-6 THƯ VIỆN HÌNH ẢNH
+            .lib__imgs
+              +showSideBarLibImg(blogSideBar2)
+          #side-bar-tags__container.mt-4.pl-8
+            .title
+              span 
+                i(class="fas fa-th-large")
+              h5.fw-6 THẺ TAGS
+            .tags
+              +showSideBarTags(blogSideBarTags)
+        div(class="col-xs-12 col-sm-12 col-md-9 col-lg-9 blog-list__container")
+          each blog in listBlogs
+            .blog-item 
+              .blog-item__img 
+                img(src=blog.urlImg, alt="")
+              .blog-item__title.mt-6.mb-4 
+                a.fw-6(href="/blog-detail.html")= blog.name
+              .blog-item__info.mb-6 
+                span.info__date.mr-6= blog.date
+                .info__upload
+                  i.mr-4(class="fas fa-user")
+                  span Đăng bởi 
+                  span.info__upload-user.mr-6= blog.upLoadBy
+                .blog-item__comment 
+                  i.mr-6(class="fas fa-comment-dots")
+                  span= blog.numberCmt
+                    |  Bình luận
+              .blog-item__des= blog.des
+                | <a href="./blog-detail.html" class="read-more">[Đọc tiếp]</a>
+            hr
+          .row.panigation 
+            button Trang trước
+            button 1
+            button 2
+            button 3
+            button Trang cuối

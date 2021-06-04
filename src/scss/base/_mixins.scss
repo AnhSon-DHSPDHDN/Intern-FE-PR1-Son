@@ -40,3 +40,19 @@
   display: flex;
   flex-direction: column;
 }
+
+.titleSideBar{
+  display: flex;
+  span{
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    width: 3rem;
+    i{
+      color: $color-yellow;
+    }
+  }
+  h5{
+    line-height: 2rem;
+  }
+}

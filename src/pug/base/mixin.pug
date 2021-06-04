@@ -72,3 +72,31 @@ mixin showSideBarSale(data)
             .list-sidebar__content
               h5.fw-6= listItem.name
               span.price.fw-6.color-red= listItem.price
+
+mixin showSideBarNew(data)
+  ul#side-bar-new__container.mt-4
+    each listItem in data
+      if listItem.isActive 
+        li.active
+          .list-sidebar 
+            span 
+              i(class=listItem.icon)
+            h5.fw-6= listItem.name
+      else          
+        li
+          .list-sidebar
+            h5.ml-4= listItem.name
+
+mixin showSideBarLibImg(data)
+  each listItem in data
+    .list-sidebar 
+      img.mt-4(src=listItem.name, alt="")
+
+mixin showSideBarTags(data)
+  each listItem in data
+    if listItem.isActive 
+      .list-sidebar 
+        a.active.mt-2.mr-2(href="/")= listItem.name 
+    else
+      .list-sidebar 
+        a.mt-2.mr-2(href="/")= listItem.name 

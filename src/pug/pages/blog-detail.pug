@@ -1,4 +1,104 @@
 extend ../base/base.pug
+include ../base/mixin.pug
 
 block content 
-  h1 Blog Detail
+  section#blog-detail-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Tin tức
+      hr
+
+    .container.blog-detail__container.mt-8.mb-8
+      .row
+        div(class="col-xs-12 col-sm-12 col-md-3 col-lg-3")
+          +showSideBarProductPage(sideBarProduct1)
+          +showSideBarNew(blogSideBar1)
+          #side-bar-lib__container.mt-4.pl-8
+            .title
+              span 
+                i(class="fas fa-th-large")
+              h5.fw-6 THƯ VIỆN HÌNH ẢNH
+            .lib__imgs
+              +showSideBarLibImg(blogSideBar2)
+          #side-bar-tags__container.mt-4.pl-8
+            .title
+              span 
+                i(class="fas fa-th-large")
+              h5.fw-6 THẺ TAGS
+            .tags
+              +showSideBarTags(blogSideBarTags)
+        div(class="col-xs-12 col-sm-12 col-md-9 col-lg-9 blog-content__container")
+          .blog-detail 
+            .blog-detail__img 
+              img(src=blogDetail.urlImg, alt="")
+            .blog-detail__title.mt-6.mb-4 
+              a.fw-6(href="/blog-detail.html")= blogDetail.name
+            .blog-detail__info.mb-6 
+              span.info__date.mr-6= blogDetail.date
+              .info__upload
+                i.mr-4(class="fas fa-user")
+                span Đăng bởi 
+                span.info__upload-user.mr-6= blogDetail.upLoadBy
+              .blog-detail__comment 
+                i.mr-6(class="fas fa-comment-dots")
+                span= blogDetail.numberCmt
+                  |  Bình luận
+            .blog-detail__des
+              each template in blogDetail.des
+                div !{template}
+          .blog-tags.mt-12 
+            .tags__container 
+              span.fw-6 TAGS: 
+                i.color-yellow.fw-1 máy khoan, 
+                i.fw-1  máy cắt cnc, máy in 3D, công nghiệp, hàn xì, uốn thép
+            .share__container
+              span.fw-6 CHIA SẺ:
+              ul 
+                each icon in iconNav
+                  li
+                    a
+                      i(class= icon)
+          hr
+          h5.fw-6 BÌNH LUẬN:
+          .blog-comment__container 
+            each comment in blogDetail.comments
+              .comment.mb-12
+                .comment__avatar 
+                  img(src=comment.avatar, alt="")
+                .comment__infor 
+                  h5.fw-6.mt-0= comment.name
+                  .infor-action
+                    span.infor-date= comment.date
+                    a.reply Trả lời
+                  p.comment__infor-content= comment.cmtText
+              each reply in comment.reply
+                .comment.mb-12.comment-reply
+                  .comment__avatar 
+                    img(src=reply.avatar, alt="")
+                  .comment__infor 
+                    h5.fw-6.mt-0= reply.name
+                    .infor-action
+                      span.infor-date= reply.date
+                      a.reply Trả lời
+                    p.comment__infor-content= reply.cmtText
+          hr
+          h5.fw-6 VIẾT BÌNH LUẬN CỦA BẠN:
+          .form-comment
+            form(action="/comment")
+              .row 
+                div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-left")
+                  label.mt-4.mb-4(for="username")
+                    | Họ và tên:
+                    span.ml-2.color-red *
+                  input(type="text" id="username") 
+                div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-right")
+                  label.mt-4.mb-4(for="email")
+                    | Email:
+                    span.ml-2.color-red *
+                  input(type="text" id="email")
+              .form-aria.mt-6
+                label.mt-4.mb-4(for="comment")
+                  | Bình luận:
+                textarea#comment(type="text")
+              button.btn-submit.mt-8(type="submit") GỬI BÌNH LUẬN
