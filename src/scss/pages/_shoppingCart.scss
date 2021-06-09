@@ -1,0 +1,62 @@
+#shopping-cart-page{
+  .cart__container{
+    table{
+      th, td{
+        text-align: center;
+        vertical-align: middle;
+      }
+      td{
+        img{
+          height: 15rem;
+          object-fit: cover;
+          width: 15rem;
+        }
+        input{
+          text-align: center;
+          width: 5rem;
+        }
+        button i{
+          color: $color-red;
+        }
+      }
+    }
+
+    .total{
+      display: flex;
+      justify-content: flex-end;
+      table{
+        td{
+          padding: 1rem 2rem 1rem 7rem;
+          text-align: end;
+        }
+      }
+    }
+
+    .btn-checkout-group{
+      display: flex;
+      justify-content: flex-end;
+      .btn-back{
+        color: $color-white;
+        background-color: $color-black;
+        padding: 1rem 2rem;
+      }
+      .btn-pay{
+        padding: 1rem 2rem;
+        margin-left: 1rem;
+        @include bgYellow;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px){
+  #shopping-cart-page{
+    .cart__container{
+      table{
+        .cart__img{
+          display: none;
+        }
+      }
+    }
+  }
+}
