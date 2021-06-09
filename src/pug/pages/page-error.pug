@@ -1,4 +1,13 @@
 extend ../base/base.pug
 
 block content 
-  h1 Error
+  section#page-error
+    .container.page-error__container
+      .row 
+        div(class="col-xs-12 col-sm-12 col-md-7 col-lg-7 error__content")
+          h1.fw-6.title 404 ERROR
+          p.des Chúng tôi không tìm thấy kết quả nào phù hợp với tìm kiếm của bạn
+            | <br> Xin vui lòng trở về trang chủ
+          a.mt-4.go-back(href="/") TRANG CHỦ
+        div(class="col-xs-12 col-sm-12 col-md-5 col-lg-5 error__img")
+          img(src="./assets/images/imgs/product11.png", alt="")

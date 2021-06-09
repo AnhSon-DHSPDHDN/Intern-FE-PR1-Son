@@ -1,4 +1,52 @@
 extend ../base/base.pug
 
-block content 
-  h1 Register
+block content
+  section#register-page
+    .container.mt-8.mb-4.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Đăng kí
+      hr
+    .container.form-container 
+      form.register-form(action="/register")
+        .row 
+          h5.fw-6.pl-6 THÔNG TIN CÁ NHÂN:
+          div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 my-infor")
+            label.mt-8.mb-8(for="fullNameRegister")
+              | Họ và tên:
+              span *
+            input(type="text" id="fullNameRegister") 
+            label.mt-8.mb-8(for="phoneNumber")
+              | Số điện thoại:
+              span *
+            input(type="text" id="phoneNumber")
+          div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 my-infor")
+            label.mt-8.mb-8(for="emailRegister")
+              | Email:
+              span *
+            input(type="text" id="emailRegister") 
+            label.mt-8.mb-8(for="address")
+              | Địa chỉ:
+              span *
+            input(type="text" id="address")
+        .row 
+          div(class="col-xs-12 col-sm-12 col-md-12 col-lg-12 regiter-send-email mt-6")
+            input#check-send-mail(type="checkbox")
+            label.ml-4.fw-1(for="check-send-mail") 
+              i Đăng kí nhận tin tức qua email 
+        .row
+          h5.fw-6.pl-6 THÔNG TIN ĐĂNG NHẬP:
+          div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 infor-login")
+            label.mt-8.mb-8(for="fullName")
+              | Họ và tên:
+              span *
+            input(type="text" id="fullName") 
+          div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 infor-login")
+            label.mt-8.mb-8(for="email")
+              | Email:
+              span *
+            input(type="text" id="email")
+        .row
+          div(class="col-xs-12 col-sm-12 col-md-12 col-lg-12 group-btn mt-8 mb-8")
+            a.btn-back(href="/login.html") QUAY LẠI
+            button.btn-register(type="submit") ĐĂNG KÍ

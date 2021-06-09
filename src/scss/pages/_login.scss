@@ -1,0 +1,45 @@
+#login-page{
+  .form-container{
+    .login-form{
+      @include flexColumn;
+      label{
+        span{
+          color: $color-red;
+          margin-left: 1rem;
+        }
+      }
+      #username, #email{
+        height: 4rem;
+      }
+
+      .remember{
+        display: flex;
+        justify-content: space-between;
+        .reset-pass{
+          &:hover{
+            color: $color-yellow;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .btn-login{
+        background-color: $color-black;
+        color: $color-white;
+        padding: 1rem 2rem;
+        width: 15rem;
+      }
+    }
+    
+    .redirect{
+      @include flexColumn;
+      .btn-register{
+        padding: 1rem 2rem;
+        display: block;
+        text-align: center;
+        width: 15rem;
+        @include bgYellow;
+      }
+    }
+  }
+}

@@ -2412,3 +2412,84 @@ footer .footer__container-bar {
       #product-detail-page .product-detail__container .detail__main .similar-product .card-grid .rating .des {
         margin-left: 1rem;
         color: #c4bfbf; }
+
+#login-page .form-container .login-form {
+  display: flex;
+  flex-direction: column; }
+  #login-page .form-container .login-form label span {
+    color: red;
+    margin-left: 1rem; }
+  #login-page .form-container .login-form #username, #login-page .form-container .login-form #email {
+    height: 4rem; }
+  #login-page .form-container .login-form .remember {
+    display: flex;
+    justify-content: space-between; }
+    #login-page .form-container .login-form .remember .reset-pass:hover {
+      color: #ffd000;
+      text-decoration: underline; }
+  #login-page .form-container .login-form .btn-login {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    width: 15rem; }
+
+#login-page .form-container .redirect {
+  display: flex;
+  flex-direction: column; }
+  #login-page .form-container .redirect .btn-register {
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+    width: 15rem;
+    background-color: #ffd000;
+    color: white; }
+
+#register-page .form-container .register-form input[type="text"] {
+  height: 4rem; }
+
+#register-page .form-container .register-form .my-infor, #register-page .form-container .register-form .infor-login {
+  display: flex;
+  flex-direction: column; }
+  #register-page .form-container .register-form .my-infor span, #register-page .form-container .register-form .infor-login span {
+    color: red;
+    margin-left: 1rem; }
+
+#register-page .form-container .register-form .group-btn {
+  display: flex; }
+  #register-page .form-container .register-form .group-btn .btn-back {
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 1rem 2rem; }
+  #register-page .form-container .register-form .group-btn .btn-register {
+    border: none;
+    margin-left: 1rem;
+    padding: 1rem 2rem;
+    background-color: #ffd000;
+    color: white; }
+    #register-page .form-container .register-form .group-btn .btn-register:focus {
+      outline: none; }
+
+#page-error .page-error__container .error__content {
+  align-items: center;
+  padding: 5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  #page-error .page-error__container .error__content .title {
+    color: #ffd000;
+    font-size: 6rem; }
+  #page-error .page-error__container .error__content .go-back {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    width: 15rem; }
+
+#page-error .page-error__container .error__img {
+  align-items: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column; }
+  #page-error .page-error__container .error__img img {
+    object-fit: cover;
+    width: 30rem; }

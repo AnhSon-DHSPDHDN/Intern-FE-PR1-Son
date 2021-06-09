@@ -1,5 +1,35 @@
 extend ../base/base.pug
 
 block content 
-  h1 Login 
-  
+  section#login-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Đăng nhập
+      hr
+    .container.form-container 
+      .row 
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6")
+          form.login-form(action="/login")
+            h5.fw-6 THÔNG TIN ĐĂNG NHẬP:
+            label.mt-4.mb-4(for="username")
+              | Họ và tên:
+              span *
+            input(type="text" id="username") 
+            label.mt-4.mb-4(for="email")
+              | Email:
+              span *
+            input(type="text" id="email")
+            .remember.mt-4
+              .remember__left
+                input(type="checkbox" id="remember-check")
+                label.fw-1.ml-4(for="remember-check") Ghi nhớ đăng nhập
+              .remember__right
+                a(href="/")
+                  i.reset-pass Bạn quên mật khẩu? 
+            button.btn-login.mt-4.mb-16(type="submit") ĐĂNG NHẬP
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 redirect")
+          h5.fw-6 BẠN CHƯA CÓ TÀI KHOẢN?
+          p.mt-8.mb-8 Đăng kí tài khoản để mua hàng nhanh hơn. Theo dõi đơn đặt hàng. Vận chuyển.
+            | Cập nhận các tin tức sự kiện và các chương trình giảm giá của chúng tôi 
+          a.btn-register(href="./register.html") ĐĂNG KÍ
