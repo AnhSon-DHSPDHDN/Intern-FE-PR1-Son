@@ -1,0 +1,147 @@
+#side-bar-new__container{
+  @include listNone;
+  width: 100%;
+  li{
+    border-bottom: 1px solid $color-gray;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    .list-sidebar{
+      display: flex;
+      span{
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        width: 3rem;
+      }
+      h5{
+        line-height: 2rem;
+      }
+    }
+    &:hover{
+      border-bottom: 2px solid $color-yellow;
+    }
+  }
+
+  .active{
+    border-bottom: 2px solid $color-yellow;
+    span i{
+      color: $color-yellow;
+    }
+  }
+}
+
+#side-bar-lib__container{
+  width: 100%;
+  .title{
+    @extend .titleSideBar;
+  }
+  .lib__imgs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img{
+      border: 1px solid $color-black-light;
+      height: 7.5rem;
+      object-fit: cover;
+      width: 7.5rem;
+    }
+  }
+}
+
+#side-bar-tags__container{
+  width: 100%;
+  .title{
+    @extend .titleSideBar;
+  }
+
+  .tags{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      border: 1px solid $color-black-light;
+      display: block;
+      font-style: italic;
+      padding: .5rem 1rem;
+      &:hover{
+        background-color: $color-black;
+        color: $color-white;
+      }
+    }
+
+    .active{
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+#blog-page{
+  .blogs__container{
+    .blog-list__container{
+      .blog-item{
+        &__img img{
+          height: 30rem;
+          object-fit: cover;
+          width: 100%;
+        }
+
+        &__title a{
+          font-size: medium;
+        }
+
+        &__info{
+          display: flex;
+          .info__date{
+            font-style: italic;
+          }
+          .info__upload{
+            font-style: italic;
+            i{
+              color: $color-black-light;
+            }
+            &-user{
+              color: $color-yellow;
+            }
+          }
+
+          .blog-item__comment{
+            i{
+              color: $color-black-light;
+            }
+            span{
+              font-style: italic;
+            }
+          }
+        }
+
+        &__des{
+          display: -webkit-box;
+          height: 10rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          .read-more{
+            color: $color-yellow;
+          }
+        }
+      }
+      
+      .panigation{
+        display: flex;
+        justify-content: flex-end;
+        button{
+          background-color: $color-white;
+          border: 1px solid $color-black;
+          margin-left: .5rem;
+          padding: .5rem 1rem;
+          &:hover{
+            background-color: $color-yellow;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

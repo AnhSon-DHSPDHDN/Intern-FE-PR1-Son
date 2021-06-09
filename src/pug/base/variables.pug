@@ -4,7 +4,7 @@
 - 
   var menuBar = [
     { name: "TRANG CHỦ", href: "/", isActive: true },
-    { name: "GIỚI THIỆU", href: "/" },
+    { name: "GIỚI THIỆU", href: "/blog.html" },
     { name: "SẢN PHẨM", href: "/product.html" },
     { name: "TIN KHUYẾN MÃI", href: "/" },
     { name: "DỊCH VỤ", href: "/" },
@@ -561,3 +561,167 @@
       rating: 5
     }
   ]
+
+//- Blog-page
+-
+  var blogSideBar1 = [
+    {
+      icon: "fas fa-th-large",
+      name: "DANH MỤC TIN TỨC",
+      isActive: true
+    },
+    {
+      name: "Đời sống pháp luật (5)",
+      isActive: false
+    },
+    {
+      name: "Kinh tế trong nước (8)",
+      isActive: false
+    },
+    {
+      name: "Sức khỏe và gia đình (9)",
+      isActive: false
+    },
+    {
+      name: "Công nghệ thông tin (5)",
+      isActive: false
+    },
+    {
+      name: "Tin tức khác (12)",
+      isActive: false
+    },
+  ]
+
+-
+  var blogSideBar2 = [
+    {
+      name: "./assets/images/imgs/product1.png",
+    },
+    {
+      name: "./assets/images/imgs/product2.png",
+    },
+    {
+      name: "./assets/images/imgs/product3.png",
+    },
+    {
+      name: "./assets/images/imgs/product4.png"
+    },
+    {
+      name: "./assets/images/imgs/product5.png"
+    },
+    {
+      name: "./assets/images/imgs/product6.png"
+    },
+  ]
+
+-
+  var blogSideBarTags = [
+    {
+      name: "thời trang",
+      isActive: true
+    },
+    {
+      name: "máy khoan"
+    },
+    {
+      name: "news"
+    },
+    {
+      name: "công nghiệp"
+    },
+    {
+      name: "xây dựng"
+    },
+    {
+      name: "phay"
+    },
+    {
+      name: "máy cắt"
+    },
+    {
+      name: "hóa chất"
+    },
+  ]
+
+-
+  var listBlogs = [
+    {
+      urlImg: "./assets/images/imgs/banner1.jpg",
+      name: "THẾ HỆ MÁY KHOAN CẮT CNC ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG",
+      date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+      upLoadBy: "Design Team",
+      numberCmt: "12",
+      des: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...",
+    },
+    {
+      urlImg: "./assets/images/imgs/banner2.jpg",
+      name: "THẾ HỆ MÁY KHOAN CẮT CNC ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG",
+      date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+      upLoadBy: "Design Team",
+      numberCmt: "12",
+      des: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...",
+    },
+    {
+      urlImg: "./assets/images/imgs/banner3.png",
+      name: "THẾ HỆ MÁY KHOAN CẮT CNC ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG",
+      date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+      upLoadBy: "Design Team",
+      numberCmt: "12",
+      des: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...",
+    },
+    {
+      urlImg: "./assets/images/imgs/banner1.jpg",
+      name: "THẾ HỆ MÁY KHOAN CẮT CNC ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG",
+      date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+      upLoadBy: "Design Team",
+      numberCmt: "12",
+      des: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...",
+    },
+  ]
+
+-
+  var blogDetail = {
+    urlImg: "./assets/images/imgs/banner1.jpg",
+    name: "THẾ HỆ MÁY KHOAN CẮT CNC ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG",
+    date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+    upLoadBy: "Design Team",
+    numberCmt: "12",
+    des: [
+      "<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      "<br/>",
+      "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      `<div class="detail-img"><img src="./assets/images/imgs/banner2.jpg" class="mt-8 mb-8"></img></div>`,
+      "<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      "<br/>",
+      "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      `<div class="detail-img"><img src="./assets/images/imgs/banner3.png" class="mt-8 mb-8"></img></div>`,
+      "<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      "<br/>",
+      "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+      "<br/>",
+      "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
+    ],
+    comments: [
+      {
+        avatar: "./assets/images/imgs/avatar.jpg",
+        name: "TRAN VAN ANH SON",
+        date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+        cmtText: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        reply: [
+          {
+            avatar: "./assets/images/imgs/avatar.jpg",
+            name: "TRAN VAN ANH SON",
+            date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+            cmtText: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+          }
+        ]
+      },
+      {
+        avatar: "./assets/images/imgs/avatar.jpg",
+        name: "TRAN VAN ANH SON",
+        date: "Thứ năm, ngày 23/10/2015 8:00 AM",
+        cmtText: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        reply: [],
+      },
+    ]
+  }
