@@ -2215,65 +2215,67 @@ footer .footer__container-bar {
       padding: 0 1rem;
       width: 15rem; }
 
-#product-page .product__container .product-list__container .product-grid .card-grid {
-  margin-bottom: 3rem;
-  padding-top: 1rem;
-  position: relative;
-  width: 100%;
-  height: 32rem;
-  box-shadow: 0 4px 8px 0 #f8eeee;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover {
-    bottom: 0;
-    box-shadow: 0 10px 8px 0 #f8eeee;
-    background-color: white;
-    display: flex;
-    height: 0;
-    justify-content: space-around;
-    padding: 0 1rem;
-    position: absolute;
-    transition: .5s;
-    visibility: hidden;
+#product-page .product__container .product-list__container .product-grid {
+  display: none; }
+  #product-page .product__container .product-list__container .product-grid .card-grid {
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    position: relative;
     width: 100%;
-    z-index: 999; }
-    #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover .bg-yellow {
-      display: block;
-      line-height: 4rem;
-      margin-bottom: 2rem;
-      margin-right: .25rem;
-      overflow: hidden;
+    height: 32rem;
+    box-shadow: 0 4px 8px 0 #f8eeee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover {
+      bottom: 0;
+      box-shadow: 0 10px 8px 0 #f8eeee;
+      background-color: white;
+      display: flex;
+      height: 0;
+      justify-content: space-around;
       padding: 0 1rem;
-      width: 50%;
-      background-color: #ffd000;
-      color: white; }
-    #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover .bg-black {
-      background-color: black;
-      color: white;
-      display: block;
-      line-height: 4rem;
-      margin-bottom: 2rem;
-      margin-left: .25rem;
-      padding: 0 1rem;
-      width: 50%; }
-  #product-page .product__container .product-list__container .product-grid .card-grid:hover .card-grid__hover {
-    bottom: -3rem;
-    height: 6rem;
-    visibility: visible; }
-  #product-page .product__container .product-list__container .product-grid .card-grid img {
-    width: 228px;
-    height: 188px;
-    object-fit: cover;
-    display: block; }
-  #product-page .product__container .product-list__container .product-grid .card-grid .price {
-    color: red; }
-  #product-page .product__container .product-list__container .product-grid .card-grid .rating {
-    color: #ffd000; }
-    #product-page .product__container .product-list__container .product-grid .card-grid .rating .des {
-      margin-left: 1rem;
-      color: #c4bfbf; }
+      position: absolute;
+      transition: .5s;
+      visibility: hidden;
+      width: 100%;
+      z-index: 999; }
+      #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover .bg-yellow {
+        display: block;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+        margin-right: .25rem;
+        overflow: hidden;
+        padding: 0 1rem;
+        width: 50%;
+        background-color: #ffd000;
+        color: white; }
+      #product-page .product__container .product-list__container .product-grid .card-grid .card-grid__hover .bg-black {
+        background-color: black;
+        color: white;
+        display: block;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+        margin-left: .25rem;
+        padding: 0 1rem;
+        width: 50%; }
+    #product-page .product__container .product-list__container .product-grid .card-grid:hover .card-grid__hover {
+      bottom: -3rem;
+      height: 6rem;
+      visibility: visible; }
+    #product-page .product__container .product-list__container .product-grid .card-grid img {
+      width: 228px;
+      height: 188px;
+      object-fit: cover;
+      display: block; }
+    #product-page .product__container .product-list__container .product-grid .card-grid .price {
+      color: red; }
+    #product-page .product__container .product-list__container .product-grid .card-grid .rating {
+      color: #ffd000; }
+      #product-page .product__container .product-list__container .product-grid .card-grid .rating .des {
+        margin-left: 1rem;
+        color: #c4bfbf; }
 
 #product-page .product__container .product-list__container #check-show {
   display: none; }

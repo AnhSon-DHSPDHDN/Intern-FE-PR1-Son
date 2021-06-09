@@ -159,6 +159,7 @@
       }
       
       .product-grid{
+        display: none;
         .card-grid{
           margin-bottom: 3rem;
           padding-top: 1rem;
@@ -206,6 +207,7 @@
           @include customCard(32rem, 228px, 188px);
         }
       }
+      
       #check-show{
         display: none;
         &:checked ~ .product-list{
