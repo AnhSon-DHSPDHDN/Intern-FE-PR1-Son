@@ -44,12 +44,12 @@ block content
         .row
           +showSideBar(sideBar)
           div(class="col-xs-12 col-sm-6 col-md-9 col-lg-9 product-list__container")
-            .row
+            .row#listProductHome
               each item in listProductHome1  
                 div(class="col-xs-12 col-sm-12 col-md-6 col-lg-4")
                   .card-grid
                     .card-grid__hover
-                      a(class="bg-yellow" href="/") MUA NGAY
+                      a(class="bg-yellow") MUA NGAY
                       a(class="bg-black" href="/product-detail.html") XEM CHI TIẾT
                     img(src=item.urlImg, alt="")
                     span.price.fw-6 1.550.000 Đ
@@ -64,7 +64,7 @@ block content
 
       +blockProduct("SẢN PHẨM MỚI", true)
       .new-product 
-        .row
+        .row#productNew
           each item in homepageProductNew  
             div(class="col-xs-12 col-sm-6 col-md-4 col-lg-4")
               .card-grid
@@ -113,7 +113,7 @@ block content
 
       +blockProduct("HÀNG MỚI VỀ", false)
       .hot-product.mt-4.mb-16
-        .row
+        .row#hot-product
           each item in hotProduct
             div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6")
               .card-list

@@ -27,33 +27,33 @@ mixin showSideBar(data)
     ul 
       each listItem in data
         if listItem.isActive 
-          li.active
-            .list-sidebar 
-              span 
-                i(class=listItem.icon)
-              h5= listItem.name
+          li.active(data-categories=listItem.data)
+            .list-sidebar(data-categories=listItem.data) 
+              span(data-categories=listItem.data) 
+                i(class=listItem.icon data-categories=listItem.data)
+              h5(data-categories=listItem.data)= listItem.name
         else          
-          li
-            .list-sidebar 
-              span 
-                i(class=listItem.icon)
-              h5= listItem.name
+          li(data-categories=listItem.data)
+            .list-sidebar(data-categories=listItem.data) 
+              span(data-categories=listItem.data) 
+                i(class=listItem.icon data-categories=listItem.data)
+              h5(data-categories=listItem.data)= listItem.name
 
 mixin showSideBarProductPage(data)
   ul#side-bar__container
     each listItem in data
       if listItem.isActive 
-        li.active
-          .list-sidebar 
-            span 
-              i(class=listItem.icon)
-            h5= listItem.name
+        li.active(data-categories=listItem.data)
+          .list-sidebar(data-categories=listItem.data)
+            span(data-categories=listItem.data)
+              i(class=listItem.icon data-categories=listItem.data)
+            h5(data-categories=listItem.data)= listItem.name
       else          
-        li
-          .list-sidebar 
-            span 
-              i(class=listItem.icon)
-            h5= listItem.name
+        li(data-categories=listItem.data)
+          .list-sidebar(data-categories=listItem.data) 
+            span(data-categories=listItem.data) 
+              i(class=listItem.icon data-categories=listItem.data)
+            h5(data-categories=listItem.data)= listItem.name
 
 mixin showSideBarSale(data)
   ul#side-bar-sale__container

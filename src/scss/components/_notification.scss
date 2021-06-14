@@ -1,0 +1,82 @@
+.notification{
+  display: none;
+  position: fixed;
+  right: 3rem;
+  top: 5rem;
+  width: 35rem;
+  z-index: 999;
+}
+
+.show-notification{
+  animation: moveNotification 1s;
+  display: block;
+}
+
+.close-notification{
+  animation: moveCloseNotification 1s;
+  display: block;
+}
+
+.display-none{
+  display: none;
+}
+
+@keyframes moveCloseNotification{
+  0%{
+    right: 3rem;
+  }
+  40%{
+    right: 5rem;
+  }
+  100%{
+    right: -40rem;
+  }
+}
+
+@keyframes moveNotification{
+  0%{
+    right: -32rem;
+  }
+  60%{
+    right: 5rem;
+  }
+  100%{
+    right: 3rem;
+  }
+}
+
+@-o-keyframes moveNotification{
+  0%{
+    right: -32rem;
+  }
+  60%{
+    right: 5rem;
+  }
+  100%{
+    right: 3rem;
+  }
+}
+
+@-webkit-keyframes moveNotification{
+  0%{
+    right: -32rem;
+  }
+  60%{
+    right: 5rem;
+  }
+  100%{
+    right: 3rem;
+  }
+}
+
+@-moz-keyframes moveNotification{
+  0%{
+    right: -32rem;
+  }
+  60%{
+    right: 5rem;
+  }
+  100%{
+    right: 3rem;
+  }
+}

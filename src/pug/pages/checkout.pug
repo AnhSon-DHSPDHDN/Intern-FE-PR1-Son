@@ -1,0 +1,61 @@
+extend ../base/base.pug
+
+block content 
+  section#checkout-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 Checkout
+      hr
+
+    .container.customer__container.mt-8.mb-8
+      #timeline 
+        .step-1.active 
+          span.step-1__content.active-content Xác nhận giỏ hàng
+        .step-2
+          span.step-2__content.active-content Xác nhận thông tin
+        .step-3
+          span.step-3__content Hoàn tất mua hàng
+
+      .row 
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6")
+          form.customer-form(action="/billPayment")
+            h5.fw-6 THÔNG TIN KHÁCH HÀNG:
+            label.mt-4.mb-4(for="username")
+              | Họ và tên:
+              span *
+            input(type="text" id="username") 
+            label.mt-4.mb-4(for="email")
+              | Email:
+              span *
+            input(type="text" id="email") 
+            label.mt-4.mb-4(for="address")
+              | Địa chỉ:
+              span *
+            input(type="text" id="address") 
+            label.mt-4.mb-4(for="phone")
+              | Số điện thoại:
+              span *
+            input(type="text" id="phone")
+            .group-btn.mt-4.mb-16 
+              button.btn-payment(type="submit") THANH TOÁN
+              a.btn-back.ml-4(href="/") Trở lại
+        div(class="col-xs-12 col-sm-12 col-md-6 col-lg-6 redirect")
+          h5.fw-6 THÔNG TIN THANH TOÁN
+          .total.mt-16.mb-16
+            table.table-bordered
+              tr 
+                td
+                  span.fw-6 TỔNG TIỀN:
+                td
+                  span.fw-6 6.850.000 Đ
+              tr 
+                td
+                  span.fw-6 THUẾ (VAT):
+                td
+                  span.fw-6 685.000 Đ
+              tr 
+                td
+                  span.fw-6 THANH TOÁN:
+                td
+                  span.fw-6.color-red 7.685.000 Đ 

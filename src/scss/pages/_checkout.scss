@@ -1,0 +1,52 @@
+#checkout-page{
+  .customer__container{
+    .customer-form{
+      @include flexColumn;
+      label{
+        span{
+          color: $color-red;
+          margin-left: 1rem;
+        }
+      }
+      #username, #email, #address, #phone{
+        height: 4rem;
+      }
+      .remember{
+        display: flex;
+        justify-content: space-between;
+        .reset-pass{
+          &:hover{
+            color: $color-yellow;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .group-btn{
+        display: flex;
+        .btn-payment{
+          padding: 1rem 2rem;
+          width: 15rem;
+          border: none;
+          @include bgYellow;
+        }
+        .btn-back{
+          color: $color-white;
+          background-color: $color-black;
+          padding: 1rem 2rem;
+        }
+      }
+    }
+
+    .total{
+      display: flex;
+      justify-content: center;
+      table{
+        td{
+          padding: 1rem 2rem 1rem 7rem;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

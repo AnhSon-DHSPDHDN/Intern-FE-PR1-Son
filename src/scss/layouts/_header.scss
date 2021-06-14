@@ -191,8 +191,68 @@ header{
           height: 2rem;
           position: absolute;
         }
+        .cart__block{
+          background-color: $color-white;
+          border: 1px solid $color-black-light;
+          right: -3rem;
+          height: 30rem;
+          overflow-y: scroll;
+          overflow-x: scroll;
+          position: absolute;
+          width: 45rem;
+          transform: scale(0);
+          transform-origin: 90% 0;
+          -webkit-transform:scale(0); /* Safari and Chrome */
+          -moz-transform:scale(0); /* Firefox */
+          -ms-transform:scale(0); /* IE 9 */
+          -o-transform:scale(0);
+          -webkit-transform-origin: 90% 0; /* Safari and Chrome */
+          -moz-transform-origin: 90% 0; /* Firefox */
+          -ms-transform-origin: 90% 0; /* IE 9 */
+          -o-transform-origin: 90% 0;
+          top: 5rem;
+          transition: transform .5s;
+          z-index: 999;
+          .block-item{
+            border-bottom: 1px solid $color-black-light;
+            display: flex;
+            line-height: 10rem;
+            img{
+              width: 10rem;
+              height: 10rem;
+            }
+            .delete-cart{
+              display: block;
+              height: 4rem;
+              line-height: 4rem;
+              margin-top: 3rem;
+            }
+          }
+        }
+
+        &:hover{
+          .cart__block{
+            transform: scale(1);
+            -webkit-transform:scale(1); /* Safari and Chrome */
+            -moz-transform:scale(1); /* Firefox */
+            -ms-transform:scale(1); /* IE 9 */
+            -o-transform:scale(1);
+            @include flexColumn;
+          }
+        }
       }
     }
+  }
+}
+
+@keyframes showCartBlock{
+  from{
+    height: 3rem;
+    width: 3rem;
+  }
+  to{
+    height: 30rem;
+    width: 45rem;
   }
 }
 

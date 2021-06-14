@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "gulp": "gulp",
+    "start": "webpack-cli serve"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,14 @@
     "browser-sync": "^2.26.14",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
     "gulp": "^4.0.2",
     "pug": "^3.0.2"
   }

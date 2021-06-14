@@ -1,0 +1,27 @@
+extend ../base/base.pug
+
+block content 
+  section#complete-page
+    .container.mt-8.mb-8.directional
+      | Trang chủ
+      i(class="fas fa-caret-right ml-4 mr-4")
+      span.fw-6 complete
+      hr
+
+    .container.page__container
+      #timeline 
+        .step-1.active 
+          span.step-1__content.active-content Xác nhận giỏ hàng
+        .step-2.active
+          span.step-2__content.active-content Xác nhận thông tin
+        .step-3.active
+          span.step-3__content Hoàn tất mua hàng
+
+      .row 
+        div(class="col-xs-12 col-sm-12 col-md-7 col-lg-7 error__content")
+          h1.fw-6.title THANKS
+          p.des Chúng tôi đã nhận được thông tin đơn hàng của bạn.
+            | <br> Cảm ơn bạn và mong tiếp tục được phục vụ bạn lần sau
+          a.mt-4.go-back(href="/") TRANG CHỦ
+        div(class="col-xs-12 col-sm-12 col-md-5 col-lg-5 error__img")
+          img(src="./assets/images/imgs/product11.png", alt="")

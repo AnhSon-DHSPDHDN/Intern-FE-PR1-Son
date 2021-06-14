@@ -13,10 +13,12 @@ html(lang="en")
 
   body 
     include ../partials/header.pug
+    include ../layouts/notification.pug
 
     block content
 
     include ../partials/footer.pug
 
+    script(src="./assets/js/bundle.js") 
     script(src="//code.jquery.com/jquery.js")
     script(src="./assets/bootstrap/js/bootstrap.min.js")
