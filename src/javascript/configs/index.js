@@ -6,5 +6,19 @@ export const APILink = {
 export const Notification = {
   ADD_TO_CART_SUCCESS: "Thêm vào giỏ hàng thành công",
   REMOVE_CART_SUCCESS: "Đã xóa sản phẩm trong giỏ hàng",
-  CART_IS_NULL: 'Không có hàng trong giỏ  !!!!!'
+  CART_IS_NULL: 'Không có hàng trong giỏ  !!!!!',
+  VALIDATE_FAIL: 'Vui lòng nhập đúng thông tin !'
+}
+
+export const Validate = {
+  require: {
+    phone: "Phone is required!",
+    fullName: "Fullname is required!",
+    email: "Email is required!",
+    address: "Address is required!"
+  },
+  invalid: {
+    phone: "Phone is invalid",
+    email: "Email is invalid"
+  }
 }

@@ -392,5 +392,98 @@
       ]
     }
   ],
-  "billPayment": []
+  "billPayment": [
+    {
+      "fullName": "asd",
+      "email": "asd@gmail.com",
+      "address": "asd",
+      "phone": "0333456456",
+      "cart": [
+        {
+          "id": 2,
+          "name": "BÚA",
+          "price": 1500000,
+          "rating": 4,
+          "review": 12,
+          "categories": "CNC",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product1.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "MÁY BAY",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "cannon3D",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product2.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        }
+      ],
+      "totalPayment": 3300000,
+      "id": 1
+    },
+    {
+      "fullName": "asd",
+      "email": "asd@gmail.com",
+      "address": "asd",
+      "phone": "0333456456",
+      "cart": [
+        {
+          "id": 2,
+          "name": "BÚA",
+          "price": 1500000,
+          "rating": 4,
+          "review": 12,
+          "categories": "CNC",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product1.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "name": "MÁY CẮT BÊ TÔNG",
+          "price": 1500000,
+          "rating": 2,
+          "review": 12,
+          "categories": "printBig",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product7.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        }
+      ],
+      "totalPayment": 3300000,
+      "id": 2
+    }
+  ]
 }

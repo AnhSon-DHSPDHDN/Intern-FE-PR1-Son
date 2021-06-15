@@ -50,7 +50,7 @@ const renderCartTable = (cart) => {
   allBtnDel.forEach(btn => btn.addEventListener('click', handleDeleteCart))
 }
 
-const renderTotalTable = (cart) => {
+export const renderTotalTable = (cart) => {
   const totalMoney = cart.reduce((total, cart) => {
     return total + cart.price * cart.quantity
   }, 0)
@@ -70,7 +70,7 @@ const handleRedirectPayment = () => {
 
 const shoppingCart = () => {
   if (window.location.pathname !== "/shopping-cart.html") return
-  const cart = JSON.parse(localStorage.getItem('cart'))
+  const cart = JSON.parse(localStorage.getItem('cart')) || []
   renderCartTable(cart)
   renderTotalTable(cart)
   ELE_BTN_PAYMENT.addEventListener('click', handleRedirectPayment)

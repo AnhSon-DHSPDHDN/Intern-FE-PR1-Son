@@ -24,19 +24,23 @@ block content
             label.mt-4.mb-4(for="username")
               | Họ và tên:
               span *
-            input(type="text" id="username") 
+            input(type="text" id="username")
+            span.color-red#validate-username 
             label.mt-4.mb-4(for="email")
               | Email:
               span *
             input(type="text" id="email") 
+            span.color-red#validate-email
             label.mt-4.mb-4(for="address")
               | Địa chỉ:
               span *
-            input(type="text" id="address") 
+            input(type="text" id="address")
+            span.color-red#validate-address 
             label.mt-4.mb-4(for="phone")
               | Số điện thoại:
               span *
             input(type="text" id="phone")
+            span.color-red#validate-phone
             .group-btn.mt-4.mb-16 
               button.btn-payment(type="submit") THANH TOÁN
               a.btn-back.ml-4(href="/") Trở lại
@@ -48,14 +52,14 @@ block content
                 td
                   span.fw-6 TỔNG TIỀN:
                 td
-                  span.fw-6 6.850.000 Đ
+                  span.fw-6(data-totalMonney) 0 Đ
               tr 
                 td
                   span.fw-6 THUẾ (VAT):
                 td
-                  span.fw-6 685.000 Đ
+                  span.fw-6(data-vat) 0 Đ
               tr 
                 td
                   span.fw-6 THANH TOÁN:
                 td
-                  span.fw-6.color-red 7.685.000 Đ 
+                  span.fw-6.color-red(data-totalPayment) 0 Đ 
