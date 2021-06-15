@@ -1424,11 +1424,9 @@ header .menu-bar {
       background-color: white;
       border: 1px solid #c4bfbf;
       right: -3rem;
-      height: 30rem;
-      overflow-y: scroll;
-      overflow-x: scroll;
+      height: 27rem;
       position: absolute;
-      width: 45rem;
+      width: 40rem;
       transform: scale(0);
       transform-origin: 90% 0;
       -webkit-transform: scale(0);
@@ -1448,18 +1446,31 @@ header .menu-bar {
       top: 5rem;
       transition: transform .5s;
       z-index: 999; }
-      header .menu-bar__container .cart .cart__block .block-item {
-        border-bottom: 1px solid #c4bfbf;
-        display: flex;
-        line-height: 10rem; }
-        header .menu-bar__container .cart .cart__block .block-item img {
-          width: 10rem;
-          height: 10rem; }
-        header .menu-bar__container .cart .cart__block .block-item .delete-cart {
-          display: block;
-          height: 4rem;
-          line-height: 4rem;
-          margin-top: 3rem; }
+      header .menu-bar__container .cart .cart__block .redirect-cart {
+        background-color: #ffd000;
+        color: white; }
+      header .menu-bar__container .cart .cart__block .cart-list {
+        height: 25rem;
+        overflow-y: scroll; }
+        header .menu-bar__container .cart .cart__block .cart-list .block-item {
+          border-bottom: 1px solid #c4bfbf;
+          display: flex;
+          line-height: 7rem;
+          width: 100%;
+          text-align: left; }
+          header .menu-bar__container .cart .cart__block .cart-list .block-item img {
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover; }
+          header .menu-bar__container .cart .cart__block .cart-list .block-item .block-item__content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; }
+            header .menu-bar__container .cart .cart__block .cart-list .block-item .block-item__content .name {
+              width: 60%;
+              height: 7rem;
+              overflow: hidden;
+              text-overflow: ellipsis; }
     header .menu-bar__container .cart:hover .cart__block {
       transform: scale(1);
       -webkit-transform: scale(1);

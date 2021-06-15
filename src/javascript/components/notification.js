@@ -13,5 +13,5 @@ export const showNotification = (message) => {
     setTimeout(() => {
       ELE_NOTIFICATION.classList.add('display-none')
     }, 950)
-  }, 2500)
+  }, 1500)
 }

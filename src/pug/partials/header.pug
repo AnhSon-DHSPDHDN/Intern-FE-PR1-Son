@@ -39,16 +39,17 @@ header
               a(class="active" href=menuItem.href)= menuItem.name
             else
               a(href=menuItem.href)= menuItem.name
-      a(class="cart" href="/shopping-cart.html")
+      .cart
         i(class="fas fa-shopping-cart")
         span.cart__notification 1
         .cart__block 
-          each cartItem in cartShopping
-            .block-item 
-              img.ml-4(src=cartItem.img, alt=cartItem.name)
-              p.name.color-black.ml-12.mb-0= cartItem.name
-                |  x 
-              span.quantity.color-red.ml-4= cartItem.quantity
-              button.delete-cart.ml-8 
-                i.color-red(class="fas fa-trash")
+          .cart-list
+            each cartItem in cartShopping
+              .block-item 
+                img.ml-4(src=cartItem.img, alt=cartItem.name)
+                .block-item__content.ml-12
+                  p.name.color-black.mb-0= cartItem.name
+                    |  x 
+                  span.quantity.color-red.ml-4.mr-4= cartItem.quantity
+          a.redirect-cart(href="/shopping-cart.html") Đi tới giỏ hàng
     

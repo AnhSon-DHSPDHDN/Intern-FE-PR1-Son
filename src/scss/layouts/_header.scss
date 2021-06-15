@@ -195,11 +195,9 @@ header{
           background-color: $color-white;
           border: 1px solid $color-black-light;
           right: -3rem;
-          height: 30rem;
-          overflow-y: scroll;
-          overflow-x: scroll;
+          height: 27rem;
           position: absolute;
-          width: 45rem;
+          width: 40rem;
           transform: scale(0);
           transform-origin: 90% 0;
           -webkit-transform:scale(0); /* Safari and Chrome */
@@ -213,20 +211,35 @@ header{
           top: 5rem;
           transition: transform .5s;
           z-index: 999;
-          .block-item{
-            border-bottom: 1px solid $color-black-light;
-            display: flex;
-            line-height: 10rem;
-            img{
-              width: 10rem;
-              height: 10rem;
-            }
-            .delete-cart{
-              display: block;
-              height: 4rem;
-              line-height: 4rem;
-              margin-top: 3rem;
-            }
+          .redirect-cart{
+            @include bgYellow;
+          }
+          .cart-list{
+            height: 25rem;
+            overflow-y: scroll;
+            .block-item{
+              border-bottom: 1px solid $color-black-light;
+              display: flex;
+              line-height: 7rem;
+              width: 100%;
+              text-align: left;
+              img{
+                width: 7rem;
+                height: 7rem;
+                object-fit: cover;
+              }
+              .block-item__content{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .name{
+                  width: 60%;
+                  height: 7rem;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+            }  
           }
         }
 
