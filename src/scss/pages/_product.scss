@@ -231,6 +231,10 @@
             color: $color-white;
           }
         }
+        .active{
+          background-color: $color-yellow;
+          color: $color-white;
+        }
       }
     }
   }

@@ -16,6 +16,14 @@ const handleDeleteCart = e => {
   renderTotalTable(cart)
 }
 
+const handleChangeQuantity = (e) => {
+  const { value } = e.target
+  if (Number(value) < 1) {
+    showNotification(Notification.QUANTITY_FAIL)
+    e.target.value = 1
+  }
+}
+
 const renderCartTable = (cart) => {
   let _result = ""
   cart.forEach((cartItem, index) => {
@@ -46,6 +54,9 @@ const renderCartTable = (cart) => {
     </tr>`
   })
   ELE_CART_TAB_BODY.innerHTML = _result
+  document.querySelectorAll('input[type="number"]')?.forEach(input => {
+    input.addEventListener('change', handleChangeQuantity)
+  })
   const allBtnDel = document.querySelectorAll('button[data-deleteId]')
   allBtnDel.forEach(btn => btn.addEventListener('click', handleDeleteCart))
 }

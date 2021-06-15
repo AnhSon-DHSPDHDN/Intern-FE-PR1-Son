@@ -7,7 +7,8 @@ export const Notification = {
   ADD_TO_CART_SUCCESS: "Thêm vào giỏ hàng thành công",
   REMOVE_CART_SUCCESS: "Đã xóa sản phẩm trong giỏ hàng",
   CART_IS_NULL: 'Không có hàng trong giỏ  !!!!!',
-  VALIDATE_FAIL: 'Vui lòng nhập đúng thông tin !'
+  VALIDATE_FAIL: 'Vui lòng nhập đúng thông tin !',
+  QUANTITY_FAIL: 'Sai thông tin số lượng !'
 }
 
 export const Validate = {

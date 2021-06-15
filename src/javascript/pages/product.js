@@ -10,6 +10,7 @@ const ELE_CHECK_SHOW_GRID = document.querySelector('#check-show-grid')
 const ELE_PRODUCT_LIST = document.querySelector('.product-list')
 const ELE_PRODUCT_GRID = document.querySelector('.product-grid')
 const ELE_LI_SIDE_BAR_CATEGORIES = document.querySelectorAll('#side-bar__container > li[data-categories]')
+const ELE_PANIGATION = document.querySelector('.panigation')
 
 const renderProduct = (products) => {
   let result = ''
@@ -73,14 +74,67 @@ const handleClickCategories = async (products, payload, event) => {
   ELE_LI_SIDE_BAR_CATEGORIES[indexActive].classList.add('active')
 }
 
+const handleChangePage = (e) => {
+  const currentPage = Number(e.target.getAttribute('data-page'))
+  renderPanigation(currentPage)
+}
+
+const renderPanigation = async (currentPage) => {
+  let result = ''
+  const allProducts = await getProducts()
+  let productInPage = Number(ELE_NUMBER_PRODUCT_IN_PAGE.value)
+  let sortBy = ELE_SORT_PRODUCT.value
+  const totalPage = Math.ceil(allProducts.length / productInPage)
+
+  const payload = {
+    _page: currentPage,
+    _limit: productInPage,
+    _sort: sortBy
+  }
+  const products = await getProducts(payload)
+  renderProduct(products)
+
+  if (currentPage === 1) {
+    result = `
+      <button class="active" data-page=${currentPage}>${currentPage}</button>
+      <button data-page=${currentPage + 1}>${currentPage + 1}</button>
+      <button data-page=${currentPage + 2}>${currentPage + 2}</button>
+      <button class="next-page">Trang sau</button>
+    `
+  } else if (currentPage === totalPage) {
+    result = `
+      <button class="pre-page">Trang trước</button>
+      <button data-page=${currentPage - 2}>${currentPage - 2}</button>
+      <button data-page=${currentPage - 1}>${currentPage - 1}</button>
+      <button class="active" data-page=${currentPage}>${currentPage}</button>
+    `
+  } else {
+    result = `
+      <button class="pre-page">Trang trước</button>
+      <button data-page=${currentPage - 1}>${currentPage - 1}</button>
+      <button class="active" data-page=${currentPage}>${currentPage}</button>
+      <button data-page=${currentPage + 1}>${currentPage + 1}</button>
+      <button class="next-page">Trang sau</button>
+    `
+  }
+  ELE_PANIGATION.innerHTML = result
+  const btnPages = document.querySelectorAll('button[data-page]')
+  document.querySelector('.pre-page')?.addEventListener('click', () => renderPanigation(currentPage - 1))
+  document.querySelector('.next-page')?.addEventListener('click', () => renderPanigation(currentPage + 1))
+  btnPages.forEach(ele => {
+    ele.addEventListener('click', handleChangePage)
+  })
+}
+
 const productPage = async () => {
   if (window.location.pathname !== '/product.html') return
 
   let products = []
   let productInPage = ELE_NUMBER_PRODUCT_IN_PAGE.value
   let sortBy = ELE_SORT_PRODUCT.value
+  let currentPage = 1
   const payload = {
-    _page: 1,
+    _page: currentPage,
     _limit: productInPage,
     _sort: sortBy
   }
@@ -89,7 +143,6 @@ const productPage = async () => {
     ELE_LI_SIDE_BAR_CATEGORIES.forEach(liElement => {
       liElement.addEventListener('click', (event) => handleClickCategories(products, payload, event))
     })
-    const allProducts = await getProducts()
 
     const searchCategories = window.location.search?.split('=')[1];
     if (searchCategories) {
@@ -106,6 +159,7 @@ const productPage = async () => {
       ELE_CHECK_SHOW_PRODUCT.checked = false
       renderProduct(products)
     })
+    renderPanigation(currentPage)
   } catch (error) {
     showNotification(error)
   }

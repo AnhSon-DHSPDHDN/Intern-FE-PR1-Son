@@ -2365,6 +2365,9 @@ footer .footer__container-bar {
     #product-page .product__container .product-list__container .panigation button:hover {
       background-color: #ffd000;
       color: white; }
+  #product-page .product__container .product-list__container .panigation .active {
+    background-color: #ffd000;
+    color: white; }
 
 #loader {
   border: 7px solid #f3f3f3;
