@@ -17,11 +17,17 @@ const handleDeleteCart = e => {
 }
 
 const handleChangeQuantity = (e) => {
-  const { value } = e.target
-  if (Number(value) < 1) {
+  const id = e.target.getAttribute('data-cartitem')
+  if (Number(e.target.value) < 1) {
     showNotification(Notification.QUANTITY_FAIL)
     e.target.value = 1
   }
+  const cart = JSON.parse(localStorage.getItem('cart'))
+  const indexChange = cart.findIndex(cart => cart.id === Number(id))
+  cart[indexChange] = { ...cart[indexChange], quantity: Number(e.target.value) }
+  renderCartTable(cart)
+  renderTotalTable(cart)
+  localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 const renderCartTable = (cart) => {
@@ -41,7 +47,7 @@ const renderCartTable = (cart) => {
         <span class="fw-6">${cartItem.price.toLocaleString()} Đ</span>
       </td>
       <td>
-        <input type="number" value=${cartItem.quantity} />
+        <input type="number" data-cartItem=${cartItem.id} value=${cartItem.quantity} />
       </td>
       <td>
         <span class="fw-6">${(cartItem.price * cartItem.quantity).toLocaleString()} Đ</span>
