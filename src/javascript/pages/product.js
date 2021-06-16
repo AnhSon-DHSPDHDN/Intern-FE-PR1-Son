@@ -147,6 +147,8 @@ const renderPanigation = async (currentPage) => {
   btnPages.forEach(ele => {
     ele.addEventListener('click', handleChangePage)
   })
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }
 
 const productPage = async () => {
