@@ -11,6 +11,12 @@ const ELE_PRODUCT_LIST = document.querySelector('.product-list')
 const ELE_PRODUCT_GRID = document.querySelector('.product-grid')
 const ELE_LI_SIDE_BAR_CATEGORIES = document.querySelectorAll('#side-bar__container > li[data-categories]')
 const ELE_PANIGATION = document.querySelector('.panigation')
+const ELE_INPUT_SEARCH = document.querySelector('.input-search')
+
+const handleRedirectDetail = (e) => {
+  const idProduct = e.target.getAttribute('data-redirect');
+  window.location.href = `${process.env.DEV_ENV}product-detail.html?id=${idProduct}`
+}
 
 const renderProduct = (products) => {
   let result = ''
@@ -20,7 +26,7 @@ const renderProduct = (products) => {
         <div class="card-grid">
           <div class="card-grid__hover">
             <a class="bg-yellow" data-id=${product.id}>MUA NGAY</a>
-            <a class="bg-black" href="/product-detail.html">XEM CHI TIẾT</a>
+            <a class="bg-black" data-redirect=${product.id}>XEM CHI TIẾT</a>
           </div>
           <img src=${product.img} alt=${product.description}/>
           <span class="price fw-6">${product.price.toLocaleString()} Đ</span>
@@ -49,13 +55,16 @@ const renderProduct = (products) => {
           <span class="price fw-6">${product.price.toLocaleString()} Đ</span>
           <div class="card-list__btn">
             <a class="bg-yellow" data-id=${product.id}>MUA NGAY</a>
-            <a class="bg-black" href="/product-detail.html">XEM CHI TIẾT</a>
+            <a class="bg-black" data-redirect=${product.id}>XEM CHI TIẾT</a>
           </div>
         </div>
       </div>`
     })
     ELE_PRODUCT_LIST.innerHTML = result
   }
+  document.querySelectorAll('a[data-redirect]').forEach(element => {
+    element.addEventListener('click', handleRedirectDetail)
+  })
   const allBtnBuy = document.querySelectorAll('a[data-id]')
   addEventClickBuy(allBtnBuy)
 }
@@ -84,15 +93,29 @@ const renderPanigation = async (currentPage) => {
   const allProducts = await getProducts()
   let productInPage = Number(ELE_NUMBER_PRODUCT_IN_PAGE.value)
   let sortBy = ELE_SORT_PRODUCT.value
+  let search = ELE_INPUT_SEARCH.value || ''
   const totalPage = Math.ceil(allProducts.length / productInPage)
 
-  const payload = {
+  const payload = (search && search !== '') ? {
+    _page: currentPage,
+    _limit: productInPage,
+    _sort: sortBy,
+    name: search
+  } : {
     _page: currentPage,
     _limit: productInPage,
     _sort: sortBy
   }
   const products = await getProducts(payload)
   renderProduct(products)
+  ELE_CHECK_SHOW_GRID.addEventListener('click', () => {
+    ELE_CHECK_SHOW_PRODUCT.checked = true
+    renderProduct(products)
+  })
+  ELE_CHECK_SHOW_LIST.addEventListener('click', () => {
+    ELE_CHECK_SHOW_PRODUCT.checked = false
+    renderProduct(products)
+  })
 
   if (currentPage === 1) {
     result = `
@@ -150,14 +173,16 @@ const productPage = async () => {
     } else {
       products = await getProducts({ ...payload })
     }
-    renderProduct(products)
-    ELE_CHECK_SHOW_GRID.addEventListener('click', () => {
-      ELE_CHECK_SHOW_PRODUCT.checked = true
-      renderProduct(products)
+    ELE_INPUT_SEARCH.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        renderPanigation(currentPage)
+      }
     })
-    ELE_CHECK_SHOW_LIST.addEventListener('click', () => {
-      ELE_CHECK_SHOW_PRODUCT.checked = false
-      renderProduct(products)
+    ELE_SORT_PRODUCT.addEventListener('change', () => {
+      renderPanigation(currentPage)
+    })
+    ELE_NUMBER_PRODUCT_IN_PAGE.addEventListener('change', () => {
+      renderPanigation(currentPage)
     })
     renderPanigation(currentPage)
   } catch (error) {

@@ -2996,6 +2996,10 @@ footer .footer__container-bar {
       top: -1.7rem; }
   #timeline .active-content {
     color: #ffd000; }
+  #timeline .active-step::before {
+    background-color: #ffd000; }
+  #timeline .active-step::after {
+    background-color: #ffd000; }
   #timeline .active {
     background-color: #ffd000; }
     #timeline .active::before {

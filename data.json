@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "MÁY KHOAN BLACK DECKER",
-      "price": 1500000,
+      "price": 1300000,
       "rating": 4,
       "review": 12,
       "categories": "CNC",
@@ -484,6 +484,206 @@
       ],
       "totalPayment": 3300000,
       "id": 2
+    },
+    {
+      "fullName": "Anhson2121999",
+      "email": "asd@gmail.com",
+      "address": "Quận Hải Châu, Đà Nẵnng",
+      "phone": "0333456456",
+      "cart": [
+        {
+          "id": 14,
+          "name": "MÁY CÀY",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "cannon3D",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product5.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 3
+        },
+        {
+          "id": 5,
+          "name": "MÁY CẮT GỖ",
+          "price": 1500000,
+          "rating": 2,
+          "review": 12,
+          "categories": "printBig",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product9.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 5
+        },
+        {
+          "id": 2,
+          "name": "BÚA",
+          "price": 1500000,
+          "rating": 4,
+          "review": 12,
+          "categories": "CNC",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product1.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 10
+        },
+        {
+          "id": 1,
+          "name": "MÁY KHOAN BLACK DECKER",
+          "price": 1300000,
+          "rating": 4,
+          "review": 12,
+          "categories": "CNC",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product4.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 16,
+          "name": "MÁY ĐIỆN THOẠI",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "alunima",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product6.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 7,
+          "name": "MÁY CẮT BÊ TÔNG 3",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "printBig",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product9.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "name": "MÁY CẮT BÊ TÔNG",
+          "price": 1500000,
+          "rating": 2,
+          "review": 12,
+          "categories": "printBig",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product7.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        }
+      ],
+      "totalPayment": 36080000,
+      "id": 3
+    },
+    {
+      "fullName": "Anhson2121999",
+      "email": "anhsondragon2@gmail.com",
+      "address": "Quận Hải Châu, Đà Nẵnng",
+      "phone": "0333456456",
+      "cart": [
+        {
+          "id": 2,
+          "name": "BÚA",
+          "price": 1500000,
+          "rating": 4,
+          "review": 12,
+          "categories": "CNC",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product1.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 2
+        },
+        {
+          "id": 10,
+          "name": "MÁY BAY",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "cannon3D",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product2.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 14,
+          "name": "MÁY CÀY",
+          "price": 1500000,
+          "rating": 9,
+          "review": 12,
+          "categories": "cannon3D",
+          "description": "Máy sịn tốt, xài 100 năm không hư Máy sịn tốt, xài 100 năm không hư",
+          "img": "./assets/images/imgs/product5.png",
+          "listImg": [
+            "./assets/images/imgs/product5.png",
+            "./assets/images/imgs/product4.png",
+            "./assets/images/imgs/product1.png",
+            "./assets/images/imgs/product3.png",
+            "./assets/images/imgs/product2.png"
+          ],
+          "quantity": 2
+        }
+      ],
+      "totalPayment": 8250000,
+      "id": 4
     }
   ]
 }

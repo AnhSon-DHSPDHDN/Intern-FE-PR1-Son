@@ -23,6 +23,25 @@ const renderCartBlock = (cart) => {
 ELE_NOTIFICATION_CART.textContent = CART.length
 renderCartBlock(CART)
 
+export const addMoreToCart = async (id, quantity) => {
+  try {
+    let cart = JSON.parse(localStorage.getItem('cart')) || []
+    const product = await getProductById(id)
+    const findProductInCart = cart.findIndex(cart => product.id === cart.id)
+    if (findProductInCart !== -1) {
+      cart[findProductInCart] = { ...product, quantity: cart[findProductInCart].quantity + quantity }
+    } else {
+      cart.push({ ...product, quantity: quantity })
+    }
+    ELE_NOTIFICATION_CART.textContent = cart.length
+    renderCartBlock(cart)
+    localStorage.setItem('cart', JSON.stringify(cart))
+    showNotification(Notification.ADD_TO_CART_SUCCESS)
+  } catch (error) {
+    showNotification(error)
+  }
+}
+
 export const addToCart = async (id) => {
   try {
     let cart = JSON.parse(localStorage.getItem('cart')) || []

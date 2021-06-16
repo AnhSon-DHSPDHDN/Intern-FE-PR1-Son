@@ -135,7 +135,14 @@
   .active-content{
     color: $color-yellow;
   }
-
+  .active-step{
+    &::before{
+      background-color: $color-yellow;
+    }
+    &::after{
+      background-color: $color-yellow;
+    }
+  }
   .active{
     background-color: $color-yellow;
     &::before{
